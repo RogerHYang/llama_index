@@ -14,3 +14,18 @@ class SpanDropEvent(BaseEvent):
     def class_name(cls):
         """Class name."""
         return "SpanDropEvent"
+
+
+class ExceptionEvent(BaseEvent):
+    """ExceptionEvent.
+
+    Args:
+        exception (BaseException): BaseException.
+    """
+
+    exception: BaseException
+
+    @classmethod
+    def class_name(cls):
+        """Class name."""
+        return "ExceptionEvent"
